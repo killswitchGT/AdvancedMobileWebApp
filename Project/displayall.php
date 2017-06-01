@@ -8,6 +8,7 @@
 <link href="styles/custom.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+<script src="javascript/storage.js"></script>
 </head> 
 	
 <body>
