@@ -24,7 +24,7 @@
 					include 'config.php';
 					include 'opendb.php';	
 					
-			$sql= "SELECT id, brand, cost
+			$sql= "SELECT id, product, cost
 					FROM product_t";
 					$result = mysqli_query($conn, $sql);
 
