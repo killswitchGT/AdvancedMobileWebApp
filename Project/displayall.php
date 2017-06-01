@@ -44,7 +44,7 @@
 					?>
 					
 	<div data-role="footer" data-theme="b">
-	  <h4>Joshua Melander &copy; 2017</h4>
+	  <h4>Doe Optometry &copy; 2017</h4>
 	</div>
 	</body>
 	
