@@ -27,7 +27,7 @@
 
 					$product = (isset($_POST['product'])    ? $_POST['product']   : '');
 
-					$sql= "SELECT product
+					$sql= "SELECT id, product, cost
 					FROM product_t
 					WHERE product LIKE '$product' LIMIT 1";
 					$result = mysqli_query($conn, $sql);
