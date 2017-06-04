@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<widget>
+		<name>Rasmussen Final Project</name>
+		<description> Final project build for Mobile Web Application </description>
+		<preference name="permissions" value="none"/>
+</widget>
