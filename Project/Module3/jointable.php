@@ -21,8 +21,8 @@
 
 
 					<?php
-					include '../Module 3/config.php';
-					include '../Module 3/opendb.php';
+					include 'config.php';
+					include 'opendb.php';
 
 					$sql= "SELECT customer_t.customerid, customer_t.fname, customer_t.lname, product_t.Product 
 					FROM customer_t 
