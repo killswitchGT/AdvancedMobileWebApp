@@ -36,7 +36,7 @@
 					    while($row = mysqli_fetch_assoc($result)) {
 							echo "First Name: " . $row["fname"]. "<br>";
 							echo "Last Name: " . $row["lname"]. "<br>";
-					        echo "Product: " . $row["product"]. "<br>";
+					        echo "Product: " . $row["product"]. "<br><hr>";
 					    }
 					} else {
 					    echo "0 results";
