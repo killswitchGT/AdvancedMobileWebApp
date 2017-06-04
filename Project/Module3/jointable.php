@@ -24,7 +24,7 @@
 					include 'config.php';
 					include 'opendb.php';
 
-					$sql= "SELECT customer_t.customerid, customer_t.fname, customer_t.lname, product_t.Product 
+					$sql= "SELECT customer_t.customerid, customer_t.fname, customer_t.lname, product_t.product 
 					FROM customer_t 
 					JOIN product_t on customer_t.productid = product_t.productid 
 					ORDER BY customer_t.lname ASC";
@@ -35,7 +35,7 @@
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
 							echo "First Name: " . $row["fname"]. "<br>";
-							echo "Last Name: " . $row["lanem"]. "<br>";
+							echo "Last Name: " . $row["lname"]. "<br>";
 					        echo "Product: " . $row["product"]. "<br>";
 					    }
 					} else {
