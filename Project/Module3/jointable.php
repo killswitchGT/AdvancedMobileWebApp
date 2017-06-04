@@ -4,7 +4,7 @@
 <title>jQuery Mobile Web App</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
-<link href="styles/custom.css" rel="stylesheet" type="text/css">
+<link href="../Module 3/styles/custom.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
 
@@ -21,10 +21,8 @@
 
 
 					<?php
-					include 'config.php';
-					include 'opendb.php';
-
-					$product = (isset($_POST['product'])    ? $_POST['product']   : '');
+					include '../Module 3/config.php';
+					include '../Module 3/opendb.php';
 
 					$sql= "SELECT customer_t.customerid, customer_t.fname, customer_t.lname, product_t.Product from customer_t JOIN product_t on customer_t.productid = product_t.productid ORDER BY customer_t.lname ASC";
 					$result = mysqli_query($conn, $sql);
