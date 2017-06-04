@@ -24,13 +24,18 @@
 					include '../Module 3/config.php';
 					include '../Module 3/opendb.php';
 
-					$sql= "SELECT customer_t.customerid, customer_t.fname, customer_t.lname, product_t.Product from customer_t JOIN product_t on customer_t.productid = product_t.productid ORDER BY customer_t.lname ASC";
+					$sql= "SELECT customer_t.customerid, customer_t.fname, customer_t.lname, product_t.Product 
+					FROM customer_t 
+					JOIN product_t on customer_t.productid = product_t.productid 
+					ORDER BY customer_t.lname ASC";
+	
 					$result = mysqli_query($conn, $sql);
 
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
-							echo "Customer: " . $row["lname, fname"]. "<br>";
+							echo "First Name: " . $row["fname"]. "<br>";
+							echo "Last Name: " . $row["lanem"]. "<br>";
 					        echo "Product: " . $row["product"]. "<br>";
 					    }
 					} else {
