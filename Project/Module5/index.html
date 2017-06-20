@@ -1,0 +1,270 @@
+<!DOCTYPE html> 
+
+<!--things to update: Color Scheme-->
+<!--fix layout - line up-->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link href="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../../Desktop/School/Advanced Mobile Web Applicaiton Development/Project/styles/custom.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1846168882376615',
+      xfbml      : true,
+      version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+	Notification.requestPermission(function (permission) {
+		// console.log(permission);
+	});
+
+	function show() {
+		var instance = new Notification(
+			"Notice Me!", {
+				body: "If you see this, you have been noticed!"
+			}
+		);
+
+		instance.onclick = function () {
+			// Something to do
+		};
+		instance.onerror = function () {
+			// Something to do
+		};
+		instance.onshow = function () {
+			// Something to do
+		};
+		instance.onclose = function () {
+			// Something to do
+		};
+	}
+</script>
+
+<button type="button" onclick="show()">Notice me!</button>
+
+</head> 
+
+<body> 
+
+<div id="page" data-role="page">
+	<div data-role="header" data-theme="b">
+		<div class="logo" align="center"><img src="../../../../Desktop/School/Advanced Mobile Web Applicaiton Development/Project/images/2.png" width="218" height="90" alt=""/></div>
+	</div>
+	<div data-role="content" data-theme="b">	
+	<h2 align="center">Doe Optometry</h2>
+	<p align="center"> Welcome to Doe Optometry Mobile App </p>
+	<button type="button" onclick="show()">Notice me!</button>
+
+	
+	
+		<ul data-role="listview" data-theme="d">
+			<li><a href="#section1">About Us</a></li>
+            <li><a href="#section2">Services</a></li>
+			<li><a href="#section3">Products</a></li>
+			<li><a href="#section4">Schedule Appointment</a></li>
+			<li><a href="#section5">Contact Us</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" data-theme="d">
+	  <h4>Doe Optometry &copy; 2017</h4>
+	</div>
+</div>
+
+<!--Facebook Like-->
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<!--About Us-->
+<div id="section1" data-role="page" data-add-back-btn="true" data-transition="fade">
+	<div data-role="header" data-theme="d">
+	  <h1>Doe Optometry - About Us</h1>
+	</div>
+	<div data-role="content" data-theme="c">
+	  <h3>What are we about?</h3>
+	  <p> Doe Optometry strives to provide the best customer service and world-class service.  </p>
+	  <h3>Meet Our Doctors</h3>
+	  <h5>Dr. Doe</h5> 
+	  <img src="../../../../Desktop/School/Advanced Mobile Web Applicaiton Development/Project/images/doe.png" alt=""/>
+	  <p> Dr. Jane Doe brings the latest advancements in optometry to Doe Optometry. She graduated from Southern California College of Optometry Summa Cum Laude in 2007 and is glad to be back working in the community.  She takes pride in providing patients with the best possible care and thoroughly enjoys getting to know her patients on a personal level. Dr. Doe still tries to keep in shape by partaking in city league basketball and volleyball.  She loves traveling and the outdoors alongside the company of her husband and has two children.</p>
+	  <h5>Dr. Mick</h5> 
+	  <img src="../../../../Desktop/School/Advanced Mobile Web Applicaiton Development/Project/images/melander.png" alt=""/>
+	  <p> Dr. Josh Melander as been practicing optometry in the area for 10 years.  He is a native of Bismarck, ND, a graduate of North Dakota State University and Pacific University College of Optometry.  Dr. Melander thoroughly enjoys working with patients of all ages…especially school aged.  In his spare time, Dr. Melander enjoys spending time with his family, friends and coaching youth sports.</p>
+	  <h5>Dr. Mick Joe</h5>
+	  <img src="../../../../Desktop/School/Advanced Mobile Web Applicaiton Development/Project/images/joe.png" alt=""/>
+	  <p>  Dr. Mick Joe is a Bismarck optometrist who enjoys working with patients that need specialty contacts particularly those with keratoconus, corneal transplants, and scarred corneas.  He has practiced in the area for 30 years and has experience working with all of the latest contact lens designs.  He does examinations for all ages from infant to elderly.  Personally Dr. Joe has had LASIK surgery as well as a cataract surgery and a retinal detachment.  Because of these experiences he takes extra care in helping patients with their visual or medical eye problems.</p>
+	</div>
+	<div data-role="footer" data-theme="d">
+	  <h4>Doe Optometry &copy; 2017</h4>
+	</div>
+</div>
+
+<!--Services-->
+<div id="section2" data-role="page" data-add-back-btn="true" data-transition="fade">
+	<div data-role="header" data-theme="d">
+		<h1>Doe Optometry - Services</h1>
+	</div>
+	<div data-role="content" data-theme="c">	
+	  <h3>Eye Care Services</h3>
+	  <ul>
+	  	<li> On-Site Lab</li>
+	  	<li> Comprehensive Eye Exams</li>
+	  	<li> Contact Lenses</li>
+	  	<li> LASIK Evaluation</li>
+	  	<li> Eyewear Gallery</li>
+	  	<li> Annual Diabetic Exams</li>
+	  	<li> Treatment and Management of Ocular Disease</li>
+	  </ul>
+	  <h3>Insurances</h3>
+	  <ul>
+	  	<li> Blue-Cross and Blue-Shield</li>
+	  	<li> VSP </li>
+	  	<li> Aetna </li>
+	  	<li> Ameritas </li>
+	  </ul>
+	  <h3> Eye Care Articles</h3>
+	  <ul>
+	  	<li><a href="https://eandv.biomedcentral.com/articles/10.1186/s40662-017-0068-8">Pharmacological Treatments of Presbyopia</a></li>
+	  	<li><a href="https://eandv.biomedcentral.com/articles/10.1186/s40662-016-0062-6">Safety and effectiveness of LASIK</a></li>
+	  </ul>
+	</div>
+	<div data-role="footer" data-theme="d">
+		<h4>Doe Optometry &copy; 2017</h4>
+	</div>
+</div>
+
+<!--Products-->
+<div id="section3" data-role="page" data-add-back-btn="true" data-transition="fade">
+	<div data-role="header" data-theme="d">
+		<h1>Doe Optometry - Products</h1>
+	</div>
+	<div data-role="content" data-theme="c">
+  		
+	  <h3>Glasses - Brand Search</h3>
+	  <div data-role="content">
+
+		               <form method="post" action="find.php">
+                  <table width="400" border="0" cellspacing="1" cellpadding="2">
+                     <tr>
+                        <td width="100">Brand Name</td>
+                        <td><input name="product" type="text" id="product"></td>
+                     </tr>
+
+                     <tr>
+                        <td width="100"> </td>
+                        <td>
+                           <input name="find" type="submit" id="add" value="Find Your Brand">
+                        </td>
+                     </tr>
+
+                  </table>
+               </form>
+               
+               <form method="post" action="jointable.php">
+                  <table width="400" border="0" cellspacing="1" cellpadding="2">
+                     <tr>
+                        <td width="100">What Glasses Customer Has</td>
+                     </tr>
+                     
+                     <tr>
+                        <td width="100"> </td>
+                        <td>
+                           <a href="jointable.php"> <input name="find" type="submit" id="add" value="Display List">
+                        </td>
+                     </tr>
+
+                  </table>
+               </form>
+	</div>
+	  	<a href="displayall.php"> <input name="find" type="submit" id="add" value="Display All Products">
+     	</a>
+      
+      
+      </div>
+	<div data-role="footer" data-theme="d">
+	  <h4>Doe Optometry &copy; 2017</h4>
+	</div>
+</div>
+
+<!--Schedule Appointment-->
+<div data-role="page" id="section4" data-add-back-btn="true" data-transition="fade">
+	<div data-role="header" data-theme="d">
+		<h1>Doe Optometry - Schedule</h1>
+	</div>
+  <div data-role="content" data-theme="c">	
+	  <h3>Schedule Your Next Appointment</h3>
+	  <p></p>
+	  <p> Tap or Click on the Book Appointment button to schedule your next appointment. </p>
+	  
+	  <script id="setmore_script" type="text/javascript" src="https://my.setmore.com/js/iframe/setmore_iframe.js"></script><a id="Setmore_button_iframe" style="float:none" href="https://my.setmore.com/bookingpage/53df2f6f-cfd0-4c6c-85d0-347219255177"><img border="none" src="https://my.setmore.com/images/bookappt/SetMore-book-button.png" alt="Book an appointment using SetMore" /></a>
+	  
+	</div>
+	<div data-role="footer" data-theme="d">
+		<h4>Doe Optometry &copy; 2017</h4>
+	</div>
+</div>
+
+<!--Contact Us-->
+<div class="ui-btn-right" id="section5" data-add-back-btn="true" data-role="page" data-transition="fade">
+	<div data-role="header" data-theme="d">
+		<h1>Doe Optometry - Contact Us</h1>
+	</div>
+  <div data-role="content" data-theme="c">	
+	  <h3>Don't Hesitate, Contact Us!</h3>
+	  <p></p>
+	  <p> If you have any issues or questions, do not hesitate to contact us. We will gladly answer all questions, comments, and concerns in a timely manner.</p>
+	</div>
+<form>
+  <div data-role="fieldcontain">
+    <label for="selectmenu" class="select">Select One:</label>
+    <select name="selectmenu" id="selectmenu">
+      <option value="option1">Question</option>
+      <option value="option2">Comment</option>
+      <option value="option3">Concern</option>
+    </select>
+  </div>
+    	
+    	<div data-role="fieldcontain">
+      		<label for="textinput2">Name:</label>
+      		<input type="text" name="textinput" id="textinput" value=""  />
+		</div>
+	    <div data-role="fieldcontain">
+	      	<label for="email">Email:</label>
+	      	<input type="text" name="emailinput" id="emailinput" value=""  />
+        </div>
+	    <div data-role="fieldcontain">
+	      <label for="textarea">Text:&nbsp;&nbsp;</label>
+	      <textarea cols="40" rows="8" name="Qinput" id="Qinput"></textarea>
+        </div>
+        <input name="submitForm" input type="submit" id="submitForm" value="Submit"></form>
+	<div data-role="footer" data-theme="d" >
+		<h4>Doe Optometry &copy; 2017</h4>
+	</div>
+</div>
+
+</body>
+</html>
